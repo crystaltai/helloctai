@@ -1,0 +1,28 @@
+main {
+  margin: 100px 2px 0px 2px;
+  height: 200px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.under-construction {
+  animation: under-construction-spin infinite 2s linear;
+}
+
+@keyframes under-construction-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.under-construction-info {
+  display: block;
+  font-family: 'Karla', sans-serif;
+  font-size: 30px;
+  color: #36363c;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
