@@ -13,6 +13,28 @@ class App extends Component {
     };
     this.turnOnVisibility = this.turnOnVisibility.bind(this);
     this.resetVisibility = this.resetVisibility.bind(this);
+    this.escFunction = this.escFunction.bind(this);
+  }
+
+  escFunction(event) {
+    if(event.keyCode === 27) {
+      this.state.photos.forEach(function(el) {
+        el.visibility = false;
+      });
+      this.setState({photos: photos});
+    }
+  }
+
+  componentDidMount() {
+    document.addEventListener("keydown", this.escFunction, false);
+  }
+
+  componentWillUnMount() {
+    document.removeEventListener("keydown", this.escFunction, false);
+  }
+
+  componentDidUpdate() {
+    window.scrollTo(0,0);
   }
 
   resetVisibility(){
@@ -56,7 +78,7 @@ const photos = [{
 }, {
   category: "Food",
   name: "Korean Mini Sausage Bowl",
-  exerpt: "I love korean food!",
+  exerpt: "(press escape to close)",
   visibility: false,
   thumbnail: "https://lh3.googleusercontent.com/1PMbxSyV8GkE4EZxm0pH6vkWofxLta5LwrIyuTroA6fgktVKRhMQA2b9vtiKqBcKcATt74VYqKN9AumS77um6TU8kWlFwZ2NH_Acankf_pWjfu4rEmVjHxsNkS9AHuk-h4zZjtz0zA=w3265-h3265",
   image: [
@@ -66,7 +88,7 @@ const photos = [{
 }, {
   category: "Food",
   name: "Tofu Bowl",
-  exerpt: "I love tofu!",
+  exerpt: "(press escape to close)",
   visibility: false,
   thumbnail: "https://lh3.googleusercontent.com/TILdTitf7B80uTAEnlSE12TfRxOwI4K_MIQxlcUl_dZExhJDhbYYZB1zR2bQ5eAvEGMohNVYaDhKQ5SSikIq7AddZWVDOHMeiUcncnG4cc2QLiAhJw2KpkSglNIitvgttjFKoTPP7Q=w3264-h3265",
   image: [
@@ -75,7 +97,7 @@ const photos = [{
 }, {
   category: "Food",
   name: "Han Bat Sul Lung Tang",
-  exerpt: "I love this!",
+  exerpt: "(press escape to close)",
   visibility: false,
   thumbnail: "https://lh3.googleusercontent.com/yfzY6HKNgW3vJzQsciV8fUYC8CA8EN8R0fsH07GnjbB4FgoukXKPU7t69OVQbHw02A6QCcWbKI1oAJ2k-YbjmNpY4O2wbtwvC4wWKOBMeK84cBQ0uggSCDHpLxQhnK-Nl3qi6ZtPnQ=w3840-h3840",
   image: [
@@ -85,7 +107,7 @@ const photos = [{
 }, {
   category: "Food",
   name: "Veggie Kimchi Fried Rice",
-  exerpt: "I love Kimchi!",
+  exerpt: "(press escape to close)",
   visibility: false,
   thumbnail: "https://lh3.googleusercontent.com/WrrkonSCnT15vwH5rgEzIF00tlTcCYlwSSRcNW6YoXXAZ5AG-kfonsNuLQlWVVj9P1URazZOwsmi37zW68mwKyF5nAOpa36pw75BCVtmVLuuCUmZtJEDMTPBfujlvAvhoQls5sVN7w=w3055-h3055",
   image: [
@@ -95,7 +117,7 @@ const photos = [{
 }, {
   category: "Food",
   name: "Steak & Eggs",
-  exerpt: "I love breakfast!",
+  exerpt: "(press escape to close)",
   visibility: false,
   thumbnail: "https://lh3.googleusercontent.com/Ii5NmCzxEg5kQrDojTPANvy9E8OA_JCkl70bw-3GjLr_5LXPT7aCNRnrfzWC5itWJBSO8JLwfTNutsyDFY9bFX23BUzv8A0dq8GAfqtuAwguTcMjtYAUE7qupAmKM5K1no1sbGNV5Q=w3840-h3840",
   image: [
@@ -105,7 +127,7 @@ const photos = [{
 }, {
   category: "Food",
   name: "Turkey BLT",
-  exerpt: "I love breakfast!",
+  exerpt: "(press escape to close)",
   visibility: false,
   thumbnail: "https://lh3.googleusercontent.com/sp3dmzkaZsclOh_2ADOOKdbbSUJMhFOj7ucSn_lLAbNE_LuxluPmDKQcclTfFKHbt9Ye9lp_vdl0YDyV1kMz-n1u1bumfhAXtLCk8haOVEnHLfLioBXEF663DHIpUeT3wcgb6M7dgw=w3817-h3817",
   image: [
@@ -115,7 +137,7 @@ const photos = [{
 }, {
   category: "Food",
   name: "Poke Bowl",
-  exerpt: "I love poke!",
+  exerpt: "(press escape to close)",
   visibility: false,
   thumbnail: "https://lh3.googleusercontent.com/J3A1ibeKwLn57DbClGjbm0-SZkituI-8CZ19xkPeMKCVBttHK79hCGqd7W7V5RDm9aMcn943RUG4j89PLy0RoZiZil_XzRAEHS2jjxE6ZXDtNj1tmKNIOUaU2EHgZvuWTrCpBKF4xw=w3153-h3153",
   image: [
@@ -124,7 +146,7 @@ const photos = [{
 }, {
   category: "Food",
   name: "Cast Iron Bibimbap",
-  exerpt: "I love breakfast!",
+  exerpt: "(press escape to close)",
   visibility: false,
   thumbnail: "https://lh3.googleusercontent.com/c1vVXdjCiAiMaNhjtMHOtX806LQdn3r70ua6Hdo9e6TNnoRE8qbL_lW_Q7CHV9dB2sIowHEfHTQt1uxENiUuePwY3V0hcZPAn6Qsy16lmvtR4dgfX3VspBDBX79spP-mZhL9LvLmzQ=w3729-h3729",
   image: [
@@ -136,7 +158,7 @@ const photos = [{
 }, {
   category: "Food",
   name: "Mini Toast",
-  exerpt: "I love breakfast!",
+  exerpt: "(press escape to close)",
   visibility: false,
   thumbnail: "https://lh3.googleusercontent.com/CkXVZUxT5iMll_WHokTv0EHGSQZc53KKp5lWU4ALhSfIRoCVbMcjC7flb7b6F0x5z0neLSa6zTgIw9W-7IQKNa0xj6GFnOWOwO_Whfqslrlbj56Dsss2J4tLj_zAkbwbqfqOU4KNaw=w3265-h3265",
   image: [
