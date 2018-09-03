@@ -3,12 +3,13 @@ import './App.css';
 
 import PhotoFeed from './components/PhotoFeed/PhotoFeed';
 import PhotoDetail from './components/PhotoDetail/PhotoDetail';
+import About from './components/About/About';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      photos: photos
+      photos: photos,
     };
     this.turnOnVisibility = this.turnOnVisibility.bind(this);
     this.resetVisibility = this.resetVisibility.bind(this);
@@ -33,6 +34,7 @@ class App extends Component {
           turnOnVisibility={this.turnOnVisibility}
           resetVisibility={this.resetVisibility}
         />
+        <About />
       </div>
     );
   }

@@ -1,0 +1,74 @@
+/* ABOUT ------------------------------------------------------- */
+
+.section-about {
+  width: 100%;
+  background-color: #ea6d6d;
+  height: 350px;
+  justify-content: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic {
+  margin-bottom: 30px;
+  width: 200px;
+}
+
+.intro {
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  color: #FFF;
+}
+
+/* EXPERIENCE ------------------------------------------------------- */
+
+.main-inner {
+  display: flex;
+  flex-flow: row ;
+  justify-content: center;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  color: #333;
+  margin-top: 20px;
+}
+
+.section-experience {
+  width: 800px;
+}
+
+.exp-label {
+  text-transform: uppercase;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 10px;
+  color: #34495e;
+}
+
+.exp-icon {
+  width: 50px;
+  float: left;
+  display: block;
+  margin-left: -75px;
+}
+
+.right {
+  float: right;
+}
+
+@media only screen and (max-width: 965px) {
+  .main-inner {
+    padding: 0px 10px;
+  }
+
+  .exp-icon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .right {
+    display: none;
+  }
+}
