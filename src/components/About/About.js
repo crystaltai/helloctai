@@ -7,7 +7,7 @@ class About extends Component {
       <div className="About">
         {/* SECTION -- ABOUT -- */}
         <div className="section-about">
-          <img src="img/Headshot1.png" alt="" className="profile-pic"/>
+          <a name="#About"><img src="img/Headshot1.png" alt="" className="profile-pic"/></a>
           <p className="intro">Hello, I'm Crystal Tai</p>
         </div>
       

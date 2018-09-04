@@ -67,7 +67,7 @@ class App extends Component {
 const photos = [{
   category: "Food",
   name: "Jjolmyeon",
-  exerpt: "I love Jjolmyeon!",
+  exerpt: "(press escape to close)",
   visibility: false,
   thumbnail: "https://lh3.googleusercontent.com/21kUzaMp6sbBWF8jAQBpqwAUWdLuIzMRcUkGqiFd8uBVT7nnCUeKvTdw_EsE3Veu66AuEc_qwlcCmkbMzjSVX2WaB0TNLDsEXWbb2ETTNGAQ6YFd8NR0vr1v_TV3CE8mQ5FieZR0VA=w3730-h3730",
   image: [
