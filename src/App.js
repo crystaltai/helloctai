@@ -56,7 +56,7 @@ class App extends Component {
           turnOnVisibility={this.turnOnVisibility}
           resetVisibility={this.resetVisibility}
         />
-        <About />
+        {/* <About /> */}
       </div>
     );
   }
